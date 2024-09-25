@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tabela{
+            border: 1px solid rgb(140 140 140);
+        }
+        th,td {
+            border: 1px solid rgb(160 160 160);
+            padding: 4px 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Lista</h1>
+    
+    <table class="tabela">
+        <thead>
+            <tr>
+                
+                
+                <th>Coluna </th>
+                <th>Data</th>
+               
+
+                
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <% for (var i = 0; i < data.length; i++){  %>
+            <tr>
+                <td><%= data[i].name %> </td>               
+                <td><a href="#">alterar</a></td>
+                <td><a href="#">deletar</a></td>
+            </tr>
+            <% } %>  -->
+            
+                <% data.forEach(data => {   %>
+                    <tr>                
+                        <td><%= data.column.title %> </td>
+                        <td><%= data.text %> </td>                        
+                    </tr>
+                <% }) %>
+               
+               
+                
+        </tbody>
+    </table>
+</body>
+</html>
